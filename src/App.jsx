@@ -6,7 +6,7 @@ function App() {
   return (
     <>
       <Auth />
-      {/* <AddFriends /> */}
+      <AddFriends />
     </>
   );
 }
