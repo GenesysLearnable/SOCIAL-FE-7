@@ -22,7 +22,7 @@ const Auth = () => {
       text: "Seamless conversations, anytime, anywhere",
     },
     {
-      title: "Just Push",
+      title: "Welcome Back",
       text: "No more waiting or dialing, just talk",
     },
   ];
@@ -69,6 +69,7 @@ const Auth = () => {
               placeholder="Email"
               onChange={handleChange}
               required
+              autoComplete="email"
             />
             <input
               type="text"
@@ -76,6 +77,7 @@ const Auth = () => {
               placeholder="Create Username"
               onChange={handleChange}
               required
+              autoComplete="username"
             />
             <input
               type="password"
@@ -83,6 +85,7 @@ const Auth = () => {
               placeholder="Create Password"
               onChange={handleChange}
               required
+              autoComplete="current-password"
             />
             <div className="agree">
               <input type="checkbox" className="checkBox" />
@@ -123,6 +126,7 @@ const Auth = () => {
             name="email"
             required
             onChange={handleChange}
+            autoComplete="email"
           />
           <input
             type="password"
@@ -130,6 +134,7 @@ const Auth = () => {
             name="password"
             required
             onChange={handleChange}
+            autoComplete="password"
           />
           <a href="#" className="forget-pswd">
             Forgot Password?
