@@ -1,7 +1,6 @@
 import React, { useState, useEffect } from "react";
 import "./Auth.css";
 
-
 const Auth = () => {
   const [isActive, setIsActive] = useState(false);
   const [userInput, setUserInput] = useState({
@@ -98,6 +97,12 @@ const Auth = () => {
               <span>Or</span>
               <div className="line"></div>
             </div>
+            <button className="signing">
+              {/* <img src={} /> */}
+              Google</button>
+            <p className="hidden" id="login" onClick={handleLoginClick}>
+              Sign In
+            </p>
           </div>
         </form>
       </div>
@@ -131,10 +136,11 @@ const Auth = () => {
             <span>Or</span>
             <div className="line"></div>
           </div>
-
           <p>Continue with</p>
-
-          
+          <button className="sign-btn">Google</button>
+          <p className="hidden" id="register" onClick={handleRegisterClick}>
+            Sign Up
+          </p>
         </form>
       </div>
 
@@ -148,9 +154,6 @@ const Auth = () => {
             <div className="image">
               <img src={Image} alt="" />
             </div>
-            <button className="hidden" id="login" onClick={handleLoginClick}>
-              Sign In
-            </button>
           </div>
 
           <div className="toggle-panel toggle-right">
@@ -161,13 +164,6 @@ const Auth = () => {
             <div className="image">
               <img src={Image} alt="" />
             </div>
-            <button
-              className="hidden"
-              id="register"
-              onClick={handleRegisterClick}
-            >
-              Sign Up
-            </button>
           </div>
         </div>
       </div>
