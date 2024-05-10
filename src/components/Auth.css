@@ -19,32 +19,29 @@ body {
   height: 100vh;
 }
 
-.form-content {
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  flex-direction: column;
-  max-height: 90vh;
-  max-width: 100%;
-  width: 400px;
-}
-
-.form-content .agree {
+.form-container .agree {
   display: flex;
   justify-content: space-between;
   width: 80%;
   margin: 10px 0 10px 0;
 }
 
-.form-content .terms {
+.form-container .terms {
   font-style: normal;
   font-size: 10px;
   display: flex;
   justify-self: flex-start;
 }
 
-.form-content .agree .checkBox {
+.form-container .agree .checkBox {
   width: 14px;
+}
+
+.form-content{
+  border: 2px solid red;
+  justify-content: center;
+  align-content: center;
+  height: 300px;
 }
 
 .container {
@@ -89,12 +86,6 @@ body {
   cursor: pointer;
 }
 
-
-
-button.hidden:hover {
-  background: #ff562256 43.47%;
-}
-
 .container form {
   background-color: #fff;
   display: flex;
@@ -121,6 +112,7 @@ button.hidden:hover {
   top: 0;
   height: 100%;
   transition: all 0.6s ease-in-out;
+  
 }
 
 .forget-pswd {
@@ -153,7 +145,7 @@ button.hidden:hover {
 .sign {
   display: flex;
   justify-content: space-between;
-  margin: 10px 0 10px 0;
+  margin: 10px 0 0 0;
 }
 
 .sign span {
@@ -161,11 +153,10 @@ button.hidden:hover {
 }
 
 .sign .line {
-  margin: 20px 7px 0 9px;
+  margin: 25px 9px 0 9px;
   border-top: #1d1c1c 1px solid;
   width: 130px;
 }
-
 
 .container.active .sign-up {
   transform: translateX(100%);
@@ -194,20 +185,6 @@ button.hidden:hover {
   margin: 10px 0;
 }
 
-.social-icons {
-  margin: 10px 0;
-}
-
-.social-icons a {
-  border: 1px solid #ccc;
-  border-radius: 20%;
-  display: inline-flex;
-  justify-content: center;
-  align-items: center;
-  margin: 0 3px;
-  width: 40px;
-  height: 40px;
-}
 
 .toggle-container {
   position: absolute;
@@ -228,13 +205,17 @@ button.hidden:hover {
 
 .toggle {
   height: 100%;
-  background: linear-gradient(
-    195deg,
-    #00095e99 22.2%,
-    #6929458f 32.75%,
-    #ff572280 43.47%,
-    #a13058 72.73%,
-    #42088dcc 80.73%
+  background: var(
+    --gradient,
+    linear-gradient(
+      272deg,
+      rgba(32, 84, 101, 0.37) 3.85%,
+      #2f86c6 44.03%,
+      rgba(45, 153, 199, 0.74) 80.29%,
+      rgba(46, 147, 199, 0.82) 85.11%,
+      rgba(42, 183, 202, 0.74) 103.62%,
+      rgba(11, 84, 152, 0.35) 120.54%
+    )
   );
   color: #fff;
   position: relative;
@@ -281,12 +262,32 @@ button.hidden:hover {
   transform: translateX(200%);
 }
 
-.image {
+.image img {
+  width: 85%;
+  margin-top: 10px;
+}
+
+.write-up p {
+  font-size: 16px;
+}
+
+.write-up img {
+  width: 42%;
+  margin-bottom: 10px;
+}
+
+.account{
   display: flex;
-  align-items: center;
+  width: 70%;
+  gap: 10px;
   justify-content: center;
 }
 
-.image img {
-  width: 55%;
+.account p{
+  font-size: 12px;
+}
+
+.sign{
+  font-weight: 700;
+  color:#08487d;
 }

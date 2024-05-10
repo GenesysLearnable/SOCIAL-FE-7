@@ -1,10 +1,10 @@
 import React, { useState, useEffect } from "react";
 import "./Auth.css";
-import Image1 from "../assets/image1-removebg-preview.png";
+// import Image1 from "../assets/image1-removebg-preview.png";
 import Image2 from "../assets/image2-removebg-preview.png";
 import Image3 from "../assets/image3-removebg-preview.png";
-import Image4 from "../assets/image4-removebg-preview (1).png";
-import Image5 from "../assets/image5-removebg-preview.png";
+// import Image4 from "../assets/image4-removebg-preview (1).png";
+import Image5 from "../assets/poieeie_1-removebg-preview.png";
 import image7 from "../assets/Group.svg";
 import image8 from "../assets/Layer 3.svg";
 import image9 from "../assets/Frame 120.svg";
@@ -38,7 +38,7 @@ const Auth = () => {
     const intervalId = setInterval(() => {
       setMessageIndex((prevIndex) => (prevIndex === 2 ? 0 : prevIndex + 1));
       setImageIndex((prevIndex) => (prevIndex === 2 ? 0 : prevIndex + 1));
-    }, 3000);
+    }, 5000);
 
     return () => clearInterval(intervalId);
   }, []);
@@ -67,7 +67,7 @@ const Auth = () => {
   return (
     <div className={`container ${isActive ? "active" : ""}`} id="container">
       <div className="form-container sign-up">
-        <form onSubmit={handleSubmit}>
+        <form onSubmit={handleSubmit} className="form-content">
           <h1 className="header">Create Account</h1>
           <input
             type="email"
@@ -100,15 +100,28 @@ const Auth = () => {
             </span>
           </div>
           <button type="submit">Sign Up</button>
+          <div className="sign">
+            <div className="line"></div>
+            <span>Or</span>
+            <div className="line"></div>
+          </div>
+          <p className="continue">Continue With</p>
+          <button type="submit" className="sign-btn">
+            <img src={image7} />
+            Google
+          </button>
+          <div className="account">
+            <p>Already have an account? </p>
+            <p className="sign" onClick={handleLoginClick}>
+              Sign In
+            </p>
+          </div>
         </form>
-        <p className="sign" onClick={handleLoginClick}>
-          Sign In
-        </p>
       </div>
 
       <div className="form-container sign-in">
         <form onSubmit={handleSubmit}>
-          <h1 className="sign-text">Sign Up</h1>
+          <h1 className="sign-text">Sign In</h1>
           <input
             type="email"
             placeholder="Email"
@@ -136,9 +149,16 @@ const Auth = () => {
             <span>Or</span>
             <div className="line"></div>
           </div>
-          <p className="sign" onClick={handleRegisterClick}>
-            Sign Up
-          </p>
+          <button type="submit" className="sign-btn">
+            <img src={image7} />
+            Google
+          </button>
+          <div className="account">
+            <span>Don't have an account? </span>
+            <p className="sign" onClick={handleRegisterClick}>
+              Sign Up
+            </p>
+          </div>
         </form>
       </div>
 
@@ -147,19 +167,19 @@ const Auth = () => {
           <div className="toggle-panel toggle-left">
             <div className="write-up">
               <img src={image8} />
-              <h2>Welcome Back</h2>
+              <p>{messages[messageIndex].text}</p>
             </div>
             <div className="image">
-              <img src={Image5} />
+              <img src={messages[imageIndex].src} alt="" />
             </div>
           </div>
           <div className="toggle-panel toggle-right">
             <div className="write-up">
               <img src={image8} />
-              <p>{messages[messageIndex].text}</p>
+              <h2>Welcome Back</h2>
             </div>
             <div className="image">
-              <img src={messages[imageIndex].src} alt="" />
+              <img src={Image5} />
             </div>
           </div>
         </div>
