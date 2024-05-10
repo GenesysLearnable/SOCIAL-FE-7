@@ -1,8 +1,8 @@
 import React from 'react'
 
-const AddFriend = () => {
+function AddFriend() {
   return (
-    <>AddFriend</>
+    <div>AddFriend</div>
   )
 }
 

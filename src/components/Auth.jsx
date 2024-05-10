@@ -1,13 +1,7 @@
 import React, { useState, useEffect } from "react";
 import "./Auth.css";
-import Image1 from "../assets/image1-removebg-preview.png";
-import Image2 from "../assets/image2-removebg-preview.png";
-import Image3 from "../assets/image3-removebg-preview.png";
-import Image4 from "../assets/image4-removebg-preview (1).png";
-import Image5 from "../assets/image5-removebg-preview.png";
-import image7 from "../assets/Group.svg";
-import image8 from "../assets/Layer 3.svg";
-import image9 from "../assets/Frame 120.svg";
+import Image from "../assets/Happy_Bunch_Desk-removebg-preview.png";
+import { FaGoogle, FaFacebookF, FaGithub, FaLinkedinIn } from "react-icons/fa";
 
 const Auth = () => {
   const [isActive, setIsActive] = useState(false);
@@ -68,38 +62,59 @@ const Auth = () => {
     <div className={`container ${isActive ? "active" : ""}`} id="container">
       <div className="form-container sign-up">
         <form onSubmit={handleSubmit}>
-          <h1 className="header">Create Account</h1>
-          <input
-            type="email"
-            name="email"
-            placeholder="Email"
-            onChange={handleChange}
-            required
-            autoComplete="email"
-          />
-          <input
-            type="text"
-            name="name"
-            placeholder="Name"
-            onChange={handleChange}
-            required
-            autoComplete="name"
-          />
-          <input
-            type="password"
-            name="password"
-            placeholder="Password"
-            onChange={handleChange}
-            required
-            autoComplete="new-password"
-          />
-          <div className="agree">
-            <input type="checkbox" className="checkBox" />
-            <span className="terms">
-              I agree to the terms and services and privacy policy
-            </span>
+          <div className="form-content">
+            <h1 className="header">Create Account</h1>
+            <input
+              type="email"
+              name="email"
+              placeholder="Email"
+              onChange={handleChange}
+              required
+              autoComplete="email"
+            />
+            <input
+              type="text"
+              name="username"
+              placeholder="Create Username"
+              onChange={handleChange}
+              required
+              autoComplete="username"
+            />
+            <input
+              type="password"
+              name="password"
+              placeholder="Create Password"
+              onChange={handleChange}
+              required
+              autoComplete="current-password"
+            />
+            <div className="agree">
+              <input type="checkbox" className="checkBox" />
+              <span className="terms">
+                I agree to the terms and services and privacy policy
+              </span>
+            </div>
+            <button>Sign Up</button>
+            <div className="sign">
+              <div className="line"></div>
+              <span>Or</span>
+              <div className="line"></div>
+            </div>
+            <div className="social-icons">
+              <a href="#" className="icon">
+                <FaGoogle />
+              </a>
+              <a href="#" className="icon">
+                <FaFacebookF />
+              </a>
+              <a href="#" className="icon">
+                <FaGithub />
+              </a>
+              <a href="#" className="icon">
+                <FaLinkedinIn />
+              </a>
+            </div>
           </div>
-          <button type="submit">Sign Up</button>
         </form>
         <p className="sign" onClick={handleLoginClick}>
           Sign In
@@ -136,9 +151,23 @@ const Auth = () => {
             <span>Or</span>
             <div className="line"></div>
           </div>
-          <p className="sign" onClick={handleRegisterClick}>
-            Sign Up
-          </p>
+
+          <p>Continue with</p>
+
+          <div className="social-icons">
+            <a href="#" className="icon">
+              <FaGoogle />
+            </a>
+            <a href="#" className="icon">
+              <FaFacebookF />
+            </a>
+            <a href="#" className="icon">
+              <FaGithub />
+            </a>
+            <a href="#" className="icon">
+              <FaLinkedinIn />
+            </a>
+          </div>
         </form>
       </div>
 

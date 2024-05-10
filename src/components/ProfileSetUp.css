@@ -1,0 +1,119 @@
+@import url("https://fonts.googleapis.com/css2?family=Montserrat:wght@100;200;300;400;500;600;700;800;900&display=swap");
+
+*,
+::after,
+::before {
+  padding: 0;
+  margin: 0;
+  outline: 0;
+  box-sizing: border-box;
+  font-family: "Montserrat", sans-serif;
+}
+
+.profile-container {
+  display: flex;
+  width: 100%;
+  background: #f4f4f4;
+}
+
+.profile-left-section,
+.profile-right-section {
+  flex: 1;
+  min-height: 700px;
+  padding: 20px;
+}
+
+.profile-left-section {
+  background: linear-gradient(
+    194.64deg,
+    rgba(0, 9, 94, 0.6) 22.2%,
+    rgba(105, 41, 69, 0.558929) 32.75%,
+    rgba(255, 87, 34, 0.5) 43.47%,
+    #a13058 72.73%,
+    rgba(66, 8, 141, 0.8) 80.73%
+  );
+  width: Fixed (709px) px;
+  height: Fixed (1, 024px) px;
+  padding: 19px 16px 19px 100px;
+  gap: 10px;
+  border-radius: 0px 50px 50px 0px;
+  opacity: 0px;
+  color: white;
+  text-align: center;
+  border-radius: 0 1.8em 1.8em 0;
+}
+.profile-left-section-wrapper {
+  margin: 3.5em 0 0 0.4em;
+  flex-direction: column;
+  align-items: center;
+  padding: 20px;
+  width: 90%;
+}
+
+.profile-left-section h1 {
+  text-align: left;
+  font-size: 20px;
+}
+
+.profile-right-section {
+  text-align: center;
+}
+
+.fixed-width {
+  margin: 3.5em auto;
+  flex-direction: column;
+  align-items: center;
+  padding: 20px;
+  width: 60%;
+}
+
+.profile-right-section p {
+  background-color: #08487d;
+
+  color: white;
+  padding: 10px;
+  border-radius: 10px;
+  font-size: 0.8em;
+}
+.setprofiles {
+  margin-top: 2rem;
+}
+.profile-image-wrapper {
+  position: relative;
+}
+.profile-right-section img {
+  margin-top: 2rem;
+  border-radius: 100px;
+  width: 200px;
+  height: 200px;
+}
+
+input {
+  width: 100%;
+  background: #08487d33;
+
+  outline: none;
+  border: none;
+  border-radius: 10px;
+}
+input,
+button {
+  padding: 10px;
+
+  margin-top: 2rem;
+}
+
+button {
+  background: #08487d;
+
+  color: white;
+  border: none;
+  cursor: pointer;
+  border-radius: 5px;
+  margin-top: 1.5rem;
+  width: 50%;
+}
+
+button:hover {
+  background-color: #8e2de2;
+}

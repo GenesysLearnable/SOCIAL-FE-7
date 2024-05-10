@@ -1,11 +1,12 @@
-import "./App.css";
-import Auth from "./components/Auth.jsx";
+import ProfileSetup from "./components/ProfileSetup.jsx";
+// import Auth from "./components/Auth.jsx";
 // import MetaMask from "./components/Transcation.jsx";
 
 function App() {
   return (
     <>
-      <Auth />
+      <ProfileSetup/>
+      {/* <Auth /> */}
       {/* <MetaMask /> */}
     </>
   );
