@@ -1,6 +1,7 @@
 import React, { useState, useEffect } from "react";
 import "./Auth.css";
-
+import Image from "../assets/Happy_Bunch_Desk-removebg-preview.png";
+import { FaGoogle, FaFacebookF, FaGithub, FaLinkedinIn } from "react-icons/fa";
 
 const Auth = () => {
   const [isActive, setIsActive] = useState(false);
@@ -9,28 +10,28 @@ const Auth = () => {
     email: "",
     password: "",
   });
-
   const [messageIndex, setMessageIndex] = useState(0);
+  const [imageIndex, setImageIndex] = useState(0);
+
   const messages = [
     {
-      title: "SeeMe",
-      text: "Connecting you, wherever you roam!",
+      src: Image3,
+      text: "No more waiting or dialing, just talk",
     },
     {
-      title: "InstantChat",
+      src: image9,
       text: "Seamless conversations, anytime, anywhere",
     },
     {
-      title: "Welcome Back",
-      text: "No more waiting or dialing, just talk",
+      src: Image2,
+      text: "Connecting you, wherever you roam!",
     },
   ];
 
   useEffect(() => {
     const intervalId = setInterval(() => {
-      setMessageIndex((prevIndex) =>
-        prevIndex === 0 ? 1 : prevIndex === 1 ? 2 : 0
-      );
+      setMessageIndex((prevIndex) => (prevIndex === 2 ? 0 : prevIndex + 1));
+      setImageIndex((prevIndex) => (prevIndex === 2 ? 0 : prevIndex + 1));
     }, 3000);
 
     return () => clearInterval(intervalId);
@@ -38,9 +39,10 @@ const Auth = () => {
 
   const handleChange = (e) => {
     const { name, value } = e.target;
-    setUserInput((previous) => {
-      return { ...previous, [name]: value };
-    });
+    setUserInput((previous) => ({
+      ...previous,
+      [name]: value,
+    }));
   };
 
   const handleSubmit = (e) => {
@@ -98,13 +100,30 @@ const Auth = () => {
               <span>Or</span>
               <div className="line"></div>
             </div>
+            <div className="social-icons">
+              <a href="#" className="icon">
+                <FaGoogle />
+              </a>
+              <a href="#" className="icon">
+                <FaFacebookF />
+              </a>
+              <a href="#" className="icon">
+                <FaGithub />
+              </a>
+              <a href="#" className="icon">
+                <FaLinkedinIn />
+              </a>
+            </div>
           </div>
         </form>
+        <p className="sign" onClick={handleLoginClick}>
+          Sign In
+        </p>
       </div>
 
       <div className="form-container sign-in">
         <form onSubmit={handleSubmit}>
-          <h1 className="sign-text">Sign In</h1>
+          <h1 className="sign-text">Sign Up</h1>
           <input
             type="email"
             placeholder="Email"
@@ -119,13 +138,14 @@ const Auth = () => {
             name="password"
             required
             onChange={handleChange}
-            autoComplete="password"
+            autoComplete="current-password"
           />
           <a href="#" className="forget-pswd">
             Forgot Password?
           </a>
-          <button className="sign-btn">Sign In</button>
-
+          <button type="submit" className="sign-btn">
+            Sign In
+          </button>
           <div className="sign">
             <div className="line"></div>
             <span>Or</span>
@@ -134,7 +154,20 @@ const Auth = () => {
 
           <p>Continue with</p>
 
-          
+          <div className="social-icons">
+            <a href="#" className="icon">
+              <FaGoogle />
+            </a>
+            <a href="#" className="icon">
+              <FaFacebookF />
+            </a>
+            <a href="#" className="icon">
+              <FaGithub />
+            </a>
+            <a href="#" className="icon">
+              <FaLinkedinIn />
+            </a>
+          </div>
         </form>
       </div>
 
@@ -142,32 +175,21 @@ const Auth = () => {
         <div className="toggle">
           <div className="toggle-panel toggle-left">
             <div className="write-up">
-              <h2>{messages[messageIndex].title}</h2>
-              <p>{messages[messageIndex].text}</p>
+              <img src={image8} />
+              <h2>Welcome Back</h2>
             </div>
             <div className="image">
-              <img src={Image} alt="" />
+              <img src={Image5} />
             </div>
-            <button className="hidden" id="login" onClick={handleLoginClick}>
-              Sign In
-            </button>
           </div>
-
           <div className="toggle-panel toggle-right">
             <div className="write-up">
-              <h2>{messages[messageIndex].title}</h2>
+              <img src={image8} />
               <p>{messages[messageIndex].text}</p>
             </div>
             <div className="image">
-              <img src={Image} alt="" />
+              <img src={messages[imageIndex].src} alt="" />
             </div>
-            <button
-              className="hidden"
-              id="register"
-              onClick={handleRegisterClick}
-            >
-              Sign Up
-            </button>
           </div>
         </div>
       </div>
