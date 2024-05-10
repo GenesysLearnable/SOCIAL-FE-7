@@ -1,18 +1,19 @@
+// ProfileSetup.jsx
 import React, { useState } from 'react';
-import { useHistory } from 'react-router-dom';
+
+
 
 const ProfileSetup = () => {
   const [name, setName] = useState('John Doe');
-  const history = useHistory();
 
   const handleSave = () => {
+    // Implement save functionality
     alert(`Profile for ${name} saved!`);
-    history.push('/add-friend'); // Navigate to AddFriend component
   };
 
   return (
     <div className="profile-container">
-        <div className="profile-left-section">
+      <div className="profile-left-section">
         <div className="profile-left-section-wrapper">
         <h1>Complete and <br /> connect!</h1>
          <div className="imagery">
@@ -41,19 +42,6 @@ const ProfileSetup = () => {
         </div>
       </div>
       </div>
-
-
-
-
-
-
-
-
-
-
-
-
-      <button onClick={handleSave}>Save</button>
     </div>
   );
 };
