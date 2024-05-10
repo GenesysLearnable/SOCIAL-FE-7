@@ -1,7 +1,6 @@
 import React, { useState, useEffect } from "react";
 import "./Auth.css";
-import Image from "../assets/Happy_Bunch_Desk-removebg-preview.png";
-import { FaGoogle, FaFacebookF, FaGithub, FaLinkedinIn } from "react-icons/fa";
+
 
 const Auth = () => {
   const [isActive, setIsActive] = useState(false);
@@ -99,20 +98,6 @@ const Auth = () => {
               <span>Or</span>
               <div className="line"></div>
             </div>
-            <div className="social-icons">
-              <a href="#" className="icon">
-                <FaGoogle />
-              </a>
-              <a href="#" className="icon">
-                <FaFacebookF />
-              </a>
-              <a href="#" className="icon">
-                <FaGithub />
-              </a>
-              <a href="#" className="icon">
-                <FaLinkedinIn />
-              </a>
-            </div>
           </div>
         </form>
       </div>
@@ -149,20 +134,7 @@ const Auth = () => {
 
           <p>Continue with</p>
 
-          <div className="social-icons">
-            <a href="#" className="icon">
-              <FaGoogle />
-            </a>
-            <a href="#" className="icon">
-              <FaFacebookF />
-            </a>
-            <a href="#" className="icon">
-              <FaGithub />
-            </a>
-            <a href="#" className="icon">
-              <FaLinkedinIn />
-            </a>
-          </div>
+          
         </form>
       </div>
 
