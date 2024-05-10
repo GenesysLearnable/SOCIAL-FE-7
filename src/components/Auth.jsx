@@ -100,6 +100,12 @@ const Auth = () => {
               <span>Or</span>
               <div className="line"></div>
             </div>
+            <button className="signing">
+              {/* <img src={} /> */}
+              Google</button>
+            <p className="hidden" id="login" onClick={handleLoginClick}>
+              Sign In
+            </p>
             <div className="social-icons">
               <a href="#" className="icon">
                 <FaGoogle />
@@ -151,9 +157,11 @@ const Auth = () => {
             <span>Or</span>
             <div className="line"></div>
           </div>
-
           <p>Continue with</p>
-
+          <button className="sign-btn">Google</button>
+          <p className="hidden" id="register" onClick={handleRegisterClick}>
+            Sign Up
+          </p>
           <div className="social-icons">
             <a href="#" className="icon">
               <FaGoogle />

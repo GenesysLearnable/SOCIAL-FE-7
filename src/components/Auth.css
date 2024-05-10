@@ -82,21 +82,14 @@ body {
   color: #fff;
   margin-top: 15px;
   font-size: 12px;
-  padding: 11.5px 75px;
+  padding: 10px 65px;
   border: 1px solid transparent;
   font-weight: 600;
   letter-spacing: 0.5px;
-  text-transform: uppercase;
   cursor: pointer;
 }
 
-button.hidden {
-  padding: 10px 45px;
-  margin-top: -15px;
-  border-radius: 10px;
-  background: #0070c675;
-  transition: ease-in-out 0.1s;
-}
+
 
 button.hidden:hover {
   background: #ff562256 43.47%;
@@ -173,9 +166,6 @@ button.hidden:hover {
   width: 130px;
 }
 
-.sign-btn {
-  margin-bottom: 10px;
-}
 
 .container.active .sign-up {
   transform: translateX(100%);
