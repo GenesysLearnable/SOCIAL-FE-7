@@ -32,14 +32,6 @@ body {
 }
 
 .profile-left-section {
-  /* background: linear-gradient(
-    194.64deg,
-    rgba(0, 9, 94, 0.6) 22.2%,
-    rgba(105, 41, 69, 0.558929) 32.75%,
-    rgba(255, 87, 34, 0.5) 43.47%,
-    #a13058 72.73%,
-    rgba(66, 8, 141, 0.8) 80.73%
-  ); */
   background: var(
     --gradient,
     linear-gradient(
