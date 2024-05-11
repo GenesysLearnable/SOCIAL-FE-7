@@ -1,20 +1,38 @@
 import "./App.css";
-// import AddFriends from "./components/addfriend/AddFriend.jsx";
+import {
+  createBrowserRouter,
+  RouterProvider,
+  // Outlet,
+  // Navigate,
+} from "react-router-dom";
+import ProfileSetup from "./components/ProfileSetup.jsx";
+import AddFriends from "./components/AddFriend.jsx";
+
 import Auth from "./components/Auth.jsx";
 // import MetaMask from "./components/Transcation.jsx";
 import ProfileSetup from "./components/ProfileSetup"
 
 function App() {
+  const router = createBrowserRouter([
+    {
+      path: "/",
+      element: <Auth />,
+    },
+    {
+      path: "/setup",
+      element: <ProfileSetup />,
+    },
+    {
+      path: "/addFriends",
+      element: <AddFriends />,
+    },
+  ]);
   return (
-    <>
-      {/* <ProfileSetup/> */}
-      <Auth />
-      {/* <Auth />
-      <AddFriends />
-      <MetaMask /> */}
-    </>
+   <>
+    <RouterProvider router={router}/>
+   </>
+
   );
 }
 
 export default App;
-

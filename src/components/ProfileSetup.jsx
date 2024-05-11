@@ -1,8 +1,11 @@
-// ProfileSetup.jsx
 import React, { useState } from "react";
 import "./ProfileSetUp.css";
+
 import image1 from "../assets/image3-removebg-preview.png";
 import image2 from "../assets/avatar.png";
+
+import Image from "../assets/image1-removebg-preview.png";
+import image8 from "../assets/Layer 3.svg";
 
 const ProfileSetup = () => {
   const [name, setName] = useState("John Doe");
@@ -15,11 +18,13 @@ const ProfileSetup = () => {
     <div className="profile-container">
       <div className="profile-left-section">
         <div className="profile-left-section-wrapper">
+          <img src={image8} />
           <h1>
             Complete and <br /> connect!
           </h1>
           <div className="image">
              <img src={image1} />
+            <img src={Image} alt="Happy Desk" />
           </div>
         </div>
       </div>

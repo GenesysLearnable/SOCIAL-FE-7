@@ -1,3 +1,4 @@
+
 @import url("https://fonts.googleapis.com/css2?family=Montserrat:wght@100;200;300;400;500;600;700;800;900&display=swap");
 
 *,
@@ -51,6 +52,19 @@ body {
       rgba(11, 84, 152, 0.35) 120.54%
     )
   );
+.profile-container {
+  display: flex;
+  max-width: 100%;
+  justify-content: center;
+  align-items: center;
+  background: #f4f4f4;
+  border-radius: 20px 50px 50px 20px;
+  width: 990px;
+}
+
+.profile-left-section {
+  background: var(--bg-gradient-1);
+  display: flex;
   width: 500px;
   height: 550px;
   max-width: 100%;
@@ -58,6 +72,7 @@ body {
   color: white;
   text-align: center;
 }
+
 .profile-left-section-wrapper {
   margin: 3.5em 0 0 0.4em;
   flex-direction: column;
@@ -67,8 +82,8 @@ body {
 }
 
 .profile-left-section h1 {
-  text-align: left;
-  font-size: 20px;
+  font-size: 25px;
+  letter-spacing: 5px;
 }
 
 .profile-left-section-wrapper .image {
@@ -133,8 +148,7 @@ button {
 }
 
 button {
-  background: #08487d;
-
+  background: var(--bg-secondary);
   color: white;
   border: none;
   cursor: pointer;
@@ -143,6 +157,8 @@ button {
   width: 50%;
 }
 
-button:hover {
-  background-color: #8e2de2;
+.profile-left-section-wrapper img {
+  width: 40%;
+  margin-bottom: 5px;
+}
 }
