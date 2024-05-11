@@ -1,7 +1,7 @@
 import React, { useState, useEffect } from "react";
 import "./Auth.css";
 import axios from "axios";
-import { useNavigate,Link } from "react-router-dom";
+import { useNavigate } from "react-router-dom";
 // import Image1 from "../assets/image1-removebg-preview.png";
 import Image2 from "../assets/image2-removebg-preview.png";
 import Image3 from "../assets/image3-removebg-preview.png";
