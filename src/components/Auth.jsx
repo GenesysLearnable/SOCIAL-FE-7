@@ -153,6 +153,7 @@ const Auth = () => {
               <img src={Image5} />
             </div>
           </div>
+          
           <div className="toggle-panel toggle-right">
             <div className="write-up">
               <img src={image8} />

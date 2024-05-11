@@ -1,15 +1,17 @@
 import "./App.css";
-import AddFriends from "./components/addfriend/AddFriend.jsx";
+// import AddFriends from "./components/addfriend/AddFriend.jsx";
 import Auth from "./components/Auth.jsx";
 // import MetaMask from "./components/Transcation.jsx";
+import ProfileSetup from "./components/ProfileSetup"
 
 function App() {
   return (
     <>
-      <ProfileSetup/>
+      {/* <ProfileSetup/> */}
       <Auth />
-      {/* <AddFriends /> */}
-      {/* <MetaMask /> */}
+      {/* <Auth />
+      <AddFriends />
+      <MetaMask /> */}
     </>
   );
 }

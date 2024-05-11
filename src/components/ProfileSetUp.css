@@ -10,26 +10,49 @@
   font-family: "Montserrat", sans-serif;
 }
 
+body {
+  background: linear-gradient(to right, #e2e2e2, #c9d6ff);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-direction: column;
+  height: 100vh;
+}
+
 .profile-container {
   display: flex;
   max-width: 100%;
   justify-content: space-around;
+  align-items: center;
   background: #f4f4f4;
   border-radius: 20px 50px 50px 20px;
   width: 900px;
+  height: 550px;
 }
 
 .profile-left-section {
-  background: linear-gradient(
+  /* background: linear-gradient(
     194.64deg,
     rgba(0, 9, 94, 0.6) 22.2%,
     rgba(105, 41, 69, 0.558929) 32.75%,
     rgba(255, 87, 34, 0.5) 43.47%,
     #a13058 72.73%,
     rgba(66, 8, 141, 0.8) 80.73%
+  ); */
+  background: var(
+    --gradient,
+    linear-gradient(
+      272deg,
+      rgba(32, 84, 101, 0.37) 3.85%,
+      #2f86c6 44.03%,
+      rgba(45, 153, 199, 0.74) 80.29%,
+      rgba(46, 147, 199, 0.82) 85.11%,
+      rgba(42, 183, 202, 0.74) 103.62%,
+      rgba(11, 84, 152, 0.35) 120.54%
+    )
   );
   width: 500px;
-  height: 650px;
+  height: 550px;
   max-width: 100%;
   border-radius: 20px 50px 50px 20px;
   color: white;
@@ -46,6 +69,17 @@
 .profile-left-section h1 {
   text-align: left;
   font-size: 20px;
+}
+
+.profile-left-section-wrapper .image {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin-top: 50px;
+}
+
+.image img {
+  width: 55%;
 }
 
 .profile-right-section {
