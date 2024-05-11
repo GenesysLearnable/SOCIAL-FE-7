@@ -290,4 +290,5 @@ body {
 .sign{
   font-weight: 700;
   color:#08487d;
+  cursor: pointer;
 }
