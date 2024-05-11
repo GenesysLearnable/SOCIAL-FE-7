@@ -4,7 +4,7 @@ import "./addfriend.css";
 function AddFriends() {
   return (
     <>
-      <div className="container">
+      <div className="container-addfriend">
         <div className="parent-div2">
           <h1>Add Friends</h1>
         </div>

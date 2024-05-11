@@ -1,8 +1,7 @@
 import React, { useState, useEffect } from "react";
 import "./Auth.css";
 import axios from "axios";
-import { useNavigate,Link } from "react-router-dom";
-// import Image1 from "../assets/image1-removebg-preview.png";
+import { useNavigate } from "react-router-dom";
 import Image2 from "../assets/image2-removebg-preview.png";
 import Image3 from "../assets/image3-removebg-preview.png";
 import Image5 from "../assets/poieeie_1-removebg-preview.png";
@@ -69,7 +68,7 @@ const Auth = () => {
       const response = await axios.post("https://seeme-nga3.onrender.com/api/users/", userInput)
       
       if(response){
-        console.log("User add!",response.data);// come back and finish this Chukwuma!
+        console.log("User add!",response.data);
      
         history("/setup")
          setUserInput({username:"", email: "", password:""})
@@ -100,6 +99,7 @@ const handleLoginButton = async () => {
 }
   return (
     <div className={`container ${isActive ? "active" : ""}`} id="container">
+      <div className="continer-content">
       <div className="form-container sign-up">
         <form onSubmit={handleSubmit} className="form-content">
           <h1 className="header">Create Account</h1>
@@ -219,6 +219,8 @@ const handleLoginButton = async () => {
           </div>
         </div>
       </div>
+      </div>
+    
     </div>
   );
 };
