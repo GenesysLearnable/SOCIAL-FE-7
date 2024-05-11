@@ -275,3 +275,8 @@ body {
 .account span {
   font-size: 13px;
 }
+.sign{
+  font-weight: 700;
+  color:#08487d;
+  cursor: pointer;
+}
