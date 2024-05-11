@@ -1,12 +1,12 @@
-// ProfileSetup.jsx
 import React, { useState } from "react";
-import "./ProfileSetUp.css"
+import "./ProfileSetUp.css";
+import Image from "../assets/image1-removebg-preview.png";
+import image8 from "../assets/Layer 3.svg"
 
 const ProfileSetup = () => {
   const [name, setName] = useState("John Doe");
 
   const handleSave = () => {
-    // Implement save functionality
     alert(`Profile for ${name} saved!`);
   };
 
@@ -14,11 +14,12 @@ const ProfileSetup = () => {
     <div className="profile-container">
       <div className="profile-left-section">
         <div className="profile-left-section-wrapper">
+          <img src={image8} />
           <h1>
             Complete and <br /> connect!
           </h1>
-          <div className="imagery">
-            <img src="../assets/happydesk.svg" alt="Happy Desk" />
+          <div className="image">
+            <img src={Image} alt="Happy Desk" />
           </div>
         </div>
       </div>
