@@ -1,5 +1,7 @@
 import React, { useState, useEffect } from "react";
 import "./Auth.css";
+import axios from "axios";
+import { useNavigate,Link } from "react-router-dom";
 // import Image1 from "../assets/image1-removebg-preview.png";
 import Image2 from "../assets/image2-removebg-preview.png";
 import Image3 from "../assets/image3-removebg-preview.png";
@@ -12,13 +14,13 @@ import image9 from "../assets/Frame 120.svg";
 const Auth = () => {
   const [isActive, setIsActive] = useState(false);
   const [userInput, setUserInput] = useState({
-    name: "",
+    username: "",
     email: "",
     password: "",
   });
   const [messageIndex, setMessageIndex] = useState(0);
   const [imageIndex, setImageIndex] = useState(0);
-
+  const history = useNavigate();
   const messages = [
     {
       src: Image3,
@@ -53,7 +55,7 @@ const Auth = () => {
 
   const handleSubmit = (e) => {
     e.preventDefault();
-    console.log(userInput);
+    handleRegisterButton;
   };
 
   const handleRegisterClick = () => {
@@ -63,12 +65,53 @@ const Auth = () => {
   const handleLoginClick = () => {
     setIsActive(false);
   };
-
+  const handleRegisterButton = async() => {
+    try {
+      const response = await axios.post("https://seeme-nga3.onrender.com/api/users/", userInput)
+      
+      if(response){
+        console.log("User add!",response.data);// come back and finish this Chukwuma!
+     
+        history("/setup")
+         setUserInput({username:"", email: "", password:""})
+      }else if(response.data.response.message.includes('User already exist')){
+        alert("user already exist");
+        handleLoginClick();
+      }
+      
+      
+    } catch (error) {
+      console.error("Error adding user:", error.response.data.message);
+    }
+  }
+const handleLoginButton = async () => {
+  const {email,password} = userInput
+  const userInfo = {email,password}
+  try {
+    const response = await axios.post("https://seeme-nga3.onrender.com/api/users/auth", userInfo)
+    if (response){
+    console.log("Login sucessful!!")
+    history("/addFriends")
+   }
+    
+  } catch (error) {
+    console.error("error:",error.response.data.message)
+  }
+   
+}
   return (
     <div className={`container ${isActive ? "active" : ""}`} id="container">
       <div className="form-container sign-up">
         <form onSubmit={handleSubmit} className="form-content">
           <h1 className="header">Create Account</h1>
+          <input
+            type="text"
+            name="username"
+            placeholder="Username"
+            onChange={handleChange}
+            required
+            autoComplete="name"
+          />
           <input
             type="email"
             name="email"
@@ -76,14 +119,6 @@ const Auth = () => {
             onChange={handleChange}
             required
             autoComplete="email"
-          />
-          <input
-            type="text"
-            name="name"
-            placeholder="Name"
-            onChange={handleChange}
-            required
-            autoComplete="name"
           />
           <input
             type="password"
@@ -99,7 +134,7 @@ const Auth = () => {
               I agree to the terms and services and privacy policy
             </span>
           </div>
-          <button type="submit">Sign Up</button>
+          <button type="submit" onClick={handleRegisterButton}>Sign Up</button>
           <div className="sign">
             <div className="line"></div>
             <span>Or</span>
@@ -141,7 +176,7 @@ const Auth = () => {
           <a href="#" className="forget-pswd">
             Forgot Password?
           </a>
-          <button type="submit" className="sign-btn">
+          <button type="submit" className="sign-btn" onClick={handleLoginButton}>
             Sign In
           </button>
           <div className="sign">
