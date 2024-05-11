@@ -5,7 +5,6 @@ import { useNavigate,Link } from "react-router-dom";
 // import Image1 from "../assets/image1-removebg-preview.png";
 import Image2 from "../assets/image2-removebg-preview.png";
 import Image3 from "../assets/image3-removebg-preview.png";
-// import Image4 from "../assets/image4-removebg-preview (1).png";
 import Image5 from "../assets/poieeie_1-removebg-preview.png";
 import image7 from "../assets/Group.svg";
 import image8 from "../assets/Layer 3.svg";
@@ -137,16 +136,16 @@ const handleLoginButton = async () => {
           <button type="submit" onClick={handleRegisterButton}>Sign Up</button>
           <div className="sign">
             <div className="line"></div>
-            <span>Or</span>
+            <span className="txt-li">Or</span>
             <div className="line"></div>
           </div>
           <p className="continue">Continue With</p>
-          <button type="submit" className="sign-btn">
+          <button type="submit" className="google-btn">
             <img src={image7} />
             Google
           </button>
           <div className="account">
-            <p>Already have an account? </p>
+            <span>Already have an account? </span>
             <p className="sign" onClick={handleLoginClick}>
               Sign In
             </p>
@@ -181,15 +180,16 @@ const handleLoginButton = async () => {
           </button>
           <div className="sign">
             <div className="line"></div>
-            <span>Or</span>
+            <span className="txt-li">Or</span>
             <div className="line"></div>
           </div>
-          <button type="submit" className="sign-btn">
+          <p className="continue">Continue With</p>
+          <button type="submit" className="google-btn">
             <img src={image7} />
             Google
           </button>
           <div className="account">
-            <span>Don't have an account? </span>
+            <span className="txt-ac">Don't have an account? </span>
             <p className="sign" onClick={handleRegisterClick}>
               Sign Up
             </p>

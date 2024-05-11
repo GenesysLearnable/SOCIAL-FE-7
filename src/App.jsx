@@ -3,6 +3,8 @@ import { createBrowserRouter,RouterProvider,Outlet,Navigate } from "react-router
 import ProfileSetup from "./components/ProfileSetup.jsx";
  import AddFriends from "./components/AddFriend.jsx";
 import Auth from "./components/Auth.jsx";
+import AddFriends from "./components/AddFriend.jsx";
+// import Auth from "./components/Auth.jsx";
 // import MetaMask from "./components/Transcation.jsx";
 
 function App() {
@@ -26,6 +28,12 @@ function App() {
    <div>
     <RouterProvider router={router}/>
    </div>
+    <>
+      {/* <ProfileSetup/> */}
+      {/* <Auth /> */}
+      <AddFriends />
+      {/* <MetaMask /> */}
+    </>
   );
 }
 
