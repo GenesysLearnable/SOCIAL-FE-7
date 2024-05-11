@@ -1,3 +1,36 @@
+body {
+  background: linear-gradient(to right, #e2e2e2, #c9d6ff);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-direction: column;
+  height: 100vh;
+}
+
+.profile-container {
+  display: flex;
+  max-width: 100%;
+  justify-content: space-around;
+  align-items: center;
+  background: #f4f4f4;
+  border-radius: 20px 50px 50px 20px;
+  width: 900px;
+  height: 550px;
+}
+
+.profile-left-section {
+  background: var(
+    --gradient,
+    linear-gradient(
+      272deg,
+      rgba(32, 84, 101, 0.37) 3.85%,
+      #2f86c6 44.03%,
+      rgba(45, 153, 199, 0.74) 80.29%,
+      rgba(46, 147, 199, 0.82) 85.11%,
+      rgba(42, 183, 202, 0.74) 103.62%,
+      rgba(11, 84, 152, 0.35) 120.54%
+    )
+  );
 .profile-container {
   display: flex;
   max-width: 100%;
@@ -12,7 +45,7 @@
   background: var(--bg-gradient-1);
   display: flex;
   width: 500px;
-  height: 650px;
+  height: 550px;
   max-width: 100%;
   border-radius: 20px 50px 50px 20px;
   color: white;
@@ -30,6 +63,17 @@
 .profile-left-section h1 {
   font-size: 25px;
   letter-spacing: 5px;
+}
+
+.profile-left-section-wrapper .image {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin-top: 50px;
+}
+
+.image img {
+  width: 55%;
 }
 
 .profile-right-section {
@@ -95,4 +139,5 @@ button {
 .profile-left-section-wrapper img {
   width: 40%;
   margin-bottom: 5px;
+}
 }

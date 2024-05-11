@@ -202,6 +202,16 @@ const handleLoginButton = async () => {
           <div className="toggle-panel toggle-left">
             <div className="write-up">
               <img src={image8} />
+              <h2>Welcome Back</h2>
+            </div>
+            <div className="image">
+              <img src={Image5} />
+            </div>
+          </div>
+          
+          <div className="toggle-panel toggle-right">
+            <div className="write-up">
+              <img src={image8} />
               <p>{messages[messageIndex].text}</p>
             </div>
             <div className="image">
