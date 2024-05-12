@@ -3,12 +3,15 @@ import "./ProfileSetUp.css";
 import image2 from "../assets/avatar.png";
 import Image from "../assets/image1-removebg-preview.png";
 import image8 from "../assets/Layer 3.svg";
+import { useNavigate } from "react-router-dom";
 
 const ProfileSetup = () => {
+  const history = useNavigate();
   const [name, setName] = useState("John Doe");
 
   const handleSave = () => {
     alert(`Profile for ${name} saved!`);
+    history('/addfriends')
   };
 
   return (
