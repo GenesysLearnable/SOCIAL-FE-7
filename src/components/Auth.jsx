@@ -72,6 +72,7 @@ const Auth = () => {
 
       if (response) {
         console.log("User add!", response.data);
+        alert("user added!!")
 
         history("/setup");
         setUserInput({ username: "", email: "", password: "" });
@@ -82,7 +83,8 @@ const Auth = () => {
         handleLoginClick();
       }
     } catch (error) {
-      console.error("Error adding user:", error.response.data.message);
+      alert("Error adding user:", error.response.data.message);
+      
     }
   };
   const handleLoginButton = async () => {
@@ -95,10 +97,11 @@ const Auth = () => {
       );
       if (response) {
         console.log("Login sucessful!!");
+        alert("Login Successful!!")
         history("/addFriends");
       }
     } catch (error) {
-      console.error("error:", error.response.data.message);
+      alert("Invalid password or username");
     }
   };
   return (
