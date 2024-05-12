@@ -1,28 +1,25 @@
 import React, { useState } from "react";
-import { useNavigate } from "react-router-dom";
 import "./ProfileSetUp.css";
 import image2 from "../assets/avatar.png";
 import Image from "../assets/image1-removebg-preview.png";
 import image8 from "../assets/Layer 3.svg";
 
 const ProfileSetup = () => {
-  const history = useNavigate();
   const [name, setName] = useState("John Doe");
 
   const handleSave = () => {
     alert(`Profile for ${name} saved!`);
-    history("/addFriends")
   };
 
   return (
     <div className="profile-container">
       <div className="profile-left-section">
         <div className="profile-left-section-wrapper">
-          <img src={image8} />
+          <img src={image8} className="logo-two" />
           <h1>
-            Complete and <br /> connect!
+            Complete and connect!
           </h1>
-          <div className="image">
+          <div className="images">
             <img src={Image} alt="" />
           </div>
         </div>

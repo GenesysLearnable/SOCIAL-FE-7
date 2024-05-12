@@ -61,6 +61,7 @@ function AddFriends() {
               </label>
               <button>Add</button>
             </div>
+            {/* <img src={Image1} alt="" />  */}
             <div className="con2">
               <a href="#">continue</a>
               <button>Skip</button>
