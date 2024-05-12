@@ -1,3 +1,10 @@
+body{
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 100vh;
+}
+
 .profile-container {
   display: flex;
   max-width: 100%;
@@ -44,7 +51,8 @@
 
 .profile-left-section h1 {
   font-size: 25px;
-  letter-spacing: 5px;
+  letter-spacing: 1px;
+  margin-top: 15px;
 }
 
 .profile-left-section-wrapper .image {
@@ -117,11 +125,14 @@ button {
   width: 50%;
 }
 
-.profile-left-section-wrapper img {
-  width: 40%;
-  margin-bottom: 5px;
+.profile-left-section-wrapper .logo-two {
+  width: 30%;
 }
 
 .images {
   width: 100%;
+}
+
+.images img{
+  width: 70%;
 }

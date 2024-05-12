@@ -1,4 +1,4 @@
-.container {
+body {
   background: var(--bg-gradient-2);
   display: flex;
   align-items: center;
@@ -7,8 +7,8 @@
   width: 100%;
 }
 
-.container-content {
-  background-color: var(--bg-prmary);
+.container {
+  background-color: var(--bg-primary);
   border-radius: 30px;
   box-shadow: 0 5px 15px rgba(0, 0, 0, 0.35);
   position: relative;
@@ -42,7 +42,7 @@
   color: var(--bg-primary);
   margin-top: 15px;
   font-size: 12px;
-  padding: 14px 85px;
+  padding: 14px 56px;
   border: 1px solid transparent;
   font-weight: 600;
   letter-spacing: 0.5px;
@@ -97,7 +97,7 @@
   display: flex;
   justify-content: space-between;
   align-items: center;
-  width: 58%;
+  width: 75%;
   margin: 10px 0 10px 0;
 }
 
@@ -249,7 +249,7 @@
 }
 
 .image img {
-  width: 85%;
+  width: 80%;
   margin-top: 10px;
 }
 
