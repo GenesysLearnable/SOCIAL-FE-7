@@ -8,6 +8,7 @@ import Image5 from "../assets/poieeie_1-removebg-preview.png";
 import image7 from "../assets/Group.svg";
 import image8 from "../assets/Layer 3.svg";
 import image9 from "../assets/Frame 120.svg";
+import Particle from "./Motion";
 
 const Auth = () => {
   const [isActive, setIsActive] = useState(false);
@@ -106,6 +107,7 @@ const Auth = () => {
   };
   return (
     <div className={`container ${isActive ? "active" : ""}`} id="container">
+      <Particle />
       <div className="continer-content">
         <div className="form-container sign-up">
           <form onSubmit={handleSubmit} className="form-content">

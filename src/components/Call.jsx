@@ -13,6 +13,7 @@ import endColumn from "../assets/endColumn.jpg";
 import addCircleIcon from "../assets/addCircleIcon.jpg";
 import settingIcon from "../assets/settingIcon.jpg";
 import Logo from "../assets/Layer 3 copy.svg";
+import Particle from "./Motion";
 
 const Call = () => {
   const DataItems = [
@@ -39,6 +40,7 @@ const Call = () => {
 
   return (
     <div className="call-container">
+      <Particle />
       <img src={Logo} alt="" className="logo" />
       <div className="container-call">
         {/* Slide section */}
