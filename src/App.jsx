@@ -6,6 +6,7 @@ import {
 import ProfileSetup from "./components/ProfileSetup.jsx";
 import AddFriends from "./components/AddFriend.jsx";
 import Auth from "./components/Auth.jsx";
+import Call from "./components/Call.jsx"
 
 
 function App() {
@@ -21,6 +22,10 @@ function App() {
     {
       path: "/addFriends",
       element: <AddFriends />,
+    },
+    {
+      path: "/call",
+      element: <Call />,
     },
   ]);
   return (

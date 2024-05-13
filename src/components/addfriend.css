@@ -10,7 +10,7 @@ body{
   gap: 75px;
   justify-content: space-between;
   max-width: 100%;
-  width: 1200px;
+  width: 1050px;
   height: 90vh;
   background: var(--bg-primary);
   border-radius: 35px;
