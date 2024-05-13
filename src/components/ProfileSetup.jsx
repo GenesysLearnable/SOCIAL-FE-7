@@ -4,6 +4,7 @@ import image2 from "../assets/avatar.png";
 import Image from "../assets/image1-removebg-preview.png";
 import image8 from "../assets/Layer 3.svg";
 import { useNavigate } from "react-router-dom";
+import Particle from "./Motion";
 
 const ProfileSetup = () => {
   const history = useNavigate();
@@ -16,6 +17,7 @@ const ProfileSetup = () => {
 
   return (
     <div className="profile-container">
+    <Particle />
       <div className="profile-left-section">
         <div className="profile-left-section-wrapper">
           <img src={image8} className="logo-two" />

@@ -1,9 +1,11 @@
 import React from "react";
 import "./addfriend.css";
+import Particle from "./Motion";
 
 function AddFriends() {
   return (
     <>
+      <Particle />
       <div className="container-addfriend">
         <div className="parent-div2">
           <h1>Add Friends</h1>
