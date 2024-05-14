@@ -1,5 +1,7 @@
 body {
-  background: var(--bg-gradient-2);
+  background: url("../assets/Bg.jpeg");
+  background-size: cover;
+  
   display: flex;
   align-items: center;
   justify-content: center;
