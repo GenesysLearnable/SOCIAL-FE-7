@@ -8,7 +8,7 @@ body {
 
 .call-container {
   background: var(--bg-primary);
-  padding: 10px 30px;
+  padding: 20px 60px;
   border-radius: 20px;
 }
 
@@ -16,6 +16,7 @@ body {
   width: 252px;
   height: 66.946px;
   flex-shrink: 0;
+  z-index: 1000;
 }
 
 .container-call {
@@ -23,12 +24,13 @@ body {
   align-items: center;
   justify-content: space-between;
   max-width: 100%;
-  width: 1000px;
+  width: 900px;
 }
 
 .slide {
   overflow: hidden;
   height: 70vh;
+  z-index: 1000;
 }
 
 .searchbar {
@@ -130,6 +132,7 @@ body {
   position: relative;
   float: right;
   margin-left: 5%;
+  z-index: 1000;
 }
 
 .callIcon {
