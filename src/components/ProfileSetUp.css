@@ -10,14 +10,10 @@ body{
   max-width: 100%;
   justify-content: space-around;
   align-items: center;
-  background: #f4f4f4;
+  background: var(--bg-primary);
   border-radius: 20px 50px 50px 20px;
   width: 900px;
   height: 550px;
-}
-
-.profile-left-section {
-  background: var(--bg-gradient-1);
 }
 
 .profile-container {
@@ -39,6 +35,7 @@ body{
   border-radius: 20px 50px 50px 20px;
   color: var(--bg-primary);
   text-align: center;
+  z-index: 100;
 }
 
 .profile-left-section-wrapper {
@@ -68,9 +65,15 @@ body{
 
 .profile-right-section {
   text-align: center;
+  display: flex;
+  align-items: center;
   width: 500px;
   max-width: 100%;
-  height: 650px;
+  height: 550px;
+  z-index: 100;
+  background: var(--bg-primary);
+  border-radius: 50px 20px 20px 50px;
+  z-index: 1000;
 }
 
 .fixed-width {
@@ -84,7 +87,7 @@ body{
 .profile-right-section p {
   background-color: var(--bg-secondary);
   color: var(--bg-primary);
-  padding: 10px;
+  padding: 7px;
   border-radius: 10px;
   font-size: 0.8em;
 }

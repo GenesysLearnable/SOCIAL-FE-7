@@ -34,7 +34,7 @@ const Particle = () => {
           },
           modes: {
             push: {
-              quantity: 4,
+              quantity: 2,
             },
             repulse: {
               distance: 200,
@@ -60,7 +60,7 @@ const Particle = () => {
               default: "bounce",
             },
             random: false,
-            speed: 3,
+            speed: 1.9,
             straight: false,
           },
           number: {
@@ -68,16 +68,17 @@ const Particle = () => {
               enable: true,
               area: 800,
             },
-            value: 90,
+            value: 50,
           },
           opacity: {
             value: 0.7,
           },
+          
           shape: {
             type: "circle",
           },
           size: {
-            value: { min: 2, max: 20 },
+            value: { min: 1, max: 8 },
           },
         },
         detectRetina: true,
