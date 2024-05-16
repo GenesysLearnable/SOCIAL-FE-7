@@ -249,17 +249,17 @@ body {
   transform: translateX(200%);
 }
 
-.image img {
+.toggle-panel .image img {
   width: 80%;
   margin-top: 10px;
 }
 
-.write-up p {
+.toggle-panel .write-up p {
   font-size: 20px;
   line-height: 1.2;
 }
 
-.write-up img {
+.toggle-panel .write-up img {
   width: 45%;
   margin-bottom: 5px;
 }
