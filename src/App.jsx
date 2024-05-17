@@ -8,9 +8,7 @@ import ForgetPassword from "./components/ForgetPassword.jsx";
 import ChangePassword from "./components/ChangePassword.jsx";
 import OTP from "./components/Otp.jsx";
 import React, { createContext } from "react";
-
 export const RecoveryContext = createContext();
-import Call from "./components/Call.jsx"
 import { ToastContainer } from "react-toastify";
 import 'react-toastify/dist/ReactToastify.css';
 
