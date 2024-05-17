@@ -188,12 +188,12 @@ const Call = () => {
             <center>You</center>
           </div>
           <div className="feature">
-            <img src={speaker} alt="Speaker" className="navIcon" onClick={toggleAudio} />
-            <img src={offCamera} alt="Off camera" className="navIcon" onClick={toggleVideo} />
+            <img src={speaker} alt="Speaker" className="navIcon" onClick={handleAudioCall} />
+            <img src={offCamera} alt="Off camera" className="navIcon" onClick={handleAudioCall } />
             <div>
-              <img src={micButton} alt="Mic button" className="micButton" />
+              <img src={micButton} alt="Mic button" className="micButton" onClick={handleAudioCall} />
             </div>
-            <img src={callIcon} alt="Call icon" className="callIcon" onClick={handleVideoCall} />
+            <img src={callIcon} alt="Call icon" className="callIcon" onClick={handleAudioCall } />
           </div>
         </div>
       </div>

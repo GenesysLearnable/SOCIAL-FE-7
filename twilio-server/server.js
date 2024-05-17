@@ -5,15 +5,12 @@ const { jwt: { AccessToken }, VideoGrant } = require('twilio');
 const app = express();
 const PORT = process.env.PORT || 5500;
 
-const cors = require("cors")
+const cors = {
+  origin: 'http://localhost:5173',
+  credentials: true,
+};
 
-app.use((req, res, next) => {
-  res.header('Access-Control-Allow-Origin', '*');
-  res.header('Access-Control-Allow-Headers', 'Origin, X-Requested-With, Content-Type, Accept');
-  next();
-});
-
-app.use(cors(""))
+app.use(cors(cors))
 app.use(express.json());
 
 const twilioAccountSid = process.env.TWILIO_ACCOUNT_SID;
