@@ -14,7 +14,6 @@ import addCircleIcon from "../assets/addCircleIcon.jpg";
 import settingIcon from "../assets/settingIcon.jpg";
 import Logo from "../assets/Layer 3 copy.svg";
 import Particle from "./Motion";
-import { connect, createLocalTracks } from "twilio-video";
 
 const Call = () => {
   const [room, setRoom] = useState(null);
@@ -31,110 +30,6 @@ const Call = () => {
     { id: 7, name: "Otedola", img: otedollar },
     { id: 8, name: "Musk", img: Musk },
   ];
-
-  useEffect(() => {
-    return () => {
-      if (room) {
-        room.disconnect();
-      }
-    };
-  }, [room]);
-
-  const fetchToken = async (endpoint) => {
-    const response = await fetch(endpoint, {
-      method: "POST",
-      headers: {
-        "Content-Type": "application/json",
-      },
-      body: JSON.stringify({ identity: "user" }),
-    });
-    const data = await response.json();
-    return data.token;
-  };
-
-  const handleVideoCall = async () => {
-    const token = await fetchToken("http://localhost:5500/video-token");
-
-    const tracks = await createLocalTracks({
-      audio: true,
-      video: { width: 640 },
-    });
-
-    const room = await connect(token, {
-      name: "my-room",
-      tracks,
-    });
-
-    setRoom(room);
-
-    room.on("participantConnected", (participant) => {
-      participant.tracks.forEach((publication) => {
-        if (publication.isSubscribed) {
-          const track = publication.track;
-          document.getElementById("remote-media-div").appendChild(track.attach());
-        }
-      });
-
-      participant.on("trackSubscribed", (track) => {
-        document.getElementById("remote-media-div").appendChild(track.attach());
-      });
-    });
-  };
-
-  const handleAudioCall = async () => {
-    const token = await fetchToken("http://localhost:5500/audio-token");
-
-    const tracks = await createLocalTracks({
-      audio: true,
-      video: false,
-    });
-
-    const room = await connect(token, {
-      name: "my-room",
-      tracks,
-    });
-
-    setRoom(room);
-
-    room.on("participantConnected", (participant) => {
-      participant.tracks.forEach((publication) => {
-        if (publication.isSubscribed) {
-          const track = publication.track;
-          document.getElementById("remote-media-div").appendChild(track.attach());
-        }
-      });
-
-      participant.on("trackSubscribed", (track) => {
-        document.getElementById("remote-media-div").appendChild(track.attach());
-      });
-    });
-  };
-
-  const toggleAudio = () => {
-    if (room) {
-      room.localParticipant.audioTracks.forEach((publication) => {
-        if (isAudioEnabled) {
-          publication.track.disable();
-        } else {
-          publication.track.enable();
-        }
-      });
-      setIsAudioEnabled(!isAudioEnabled);
-    }
-  };
-
-  const toggleVideo = () => {
-    if (room) {
-      room.localParticipant.videoTracks.forEach((publication) => {
-        if (isVideoEnabled) {
-          publication.track.disable();
-        } else {
-          publication.track.enable();
-        }
-      });
-      setIsVideoEnabled(!isVideoEnabled);
-    }
-  };
 
   const SlideItem = ({ item }) => {
     return (
@@ -188,12 +83,28 @@ const Call = () => {
             <center>You</center>
           </div>
           <div className="feature">
-            <img src={speaker} alt="Speaker" className="navIcon" onClick={handleAudioCall} />
-            <img src={offCamera} alt="Off camera" className="navIcon" onClick={handleAudioCall } />
+            <img
+              src={speaker}
+              alt="Speaker"
+              className="navIcon"
+            />
+            <img
+              src={offCamera}
+              alt="Off camera"
+              className="navIcon"
+            />
             <div>
-              <img src={micButton} alt="Mic button" className="micButton" onClick={handleAudioCall} />
+              <img
+                src={micButton}
+                alt="Mic button"
+                className="micButton"
+              />
             </div>
-            <img src={callIcon} alt="Call icon" className="callIcon" onClick={handleAudioCall } />
+            <img
+              src={callIcon}
+              alt="Call icon"
+              className="callIcon"
+            />
           </div>
         </div>
       </div>
