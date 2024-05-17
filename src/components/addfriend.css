@@ -29,6 +29,7 @@ body{
   justify-content: center;
   align-items: center;  
   width: 100%;
+  z-index: 1000;
 }
 
 .parent-div {
@@ -37,7 +38,7 @@ body{
   padding: 0 6%;  
   width: 100%;
   overflow: hidden;
-
+  z-index: 1000;
 }
 
 img {
