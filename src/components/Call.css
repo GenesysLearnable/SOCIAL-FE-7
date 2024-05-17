@@ -1,0 +1,190 @@
+body {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin: 0;
+  height: 100vh;
+}
+
+.call-container {
+  background: var(--bg-primary);
+  padding: 10px 30px;
+  border-radius: 20px;
+}
+
+.call-container .logo {
+  width: 252px;
+  height: 66.946px;
+  flex-shrink: 0;
+}
+
+.container-call {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  max-width: 100%;
+  width: 1000px;
+}
+
+.slide {
+  overflow: hidden;
+  height: 70vh;
+}
+
+.searchbar {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 360px;
+  padding: 10px 25px;
+  border-radius: 10px;
+  background: #becad5;
+  margin-bottom: 20px;
+}
+
+.searchbar .inp {
+  width: 100%;
+  border: none;
+  background-color: transparent;
+  margin-top: -1px;
+}
+
+.icon1 {
+  height: 20px;
+  width: 20px;
+}
+
+.slideItem {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 11px 32px;
+  margin-bottom: 21px;
+  border-radius: 10px;
+  background: #e4e1e1;
+}
+
+.slideImg {
+  border-radius: 50%;
+  height: 50px;
+  width: 50px;
+}
+
+.slideDetails {
+  width: 100%;
+  height: 30%;
+  overflow-y: scroll;
+}
+
+::-webkit-scrollbar {
+  display: none;
+}
+
+.slideBtn {
+  display: flex;
+  justify-content: center;
+  width: 100%;
+  height: 50px;
+  border-radius: 5px;
+  background: var(--bg-secondary);
+  border: none;
+  color: #ffffff;
+  font-size: 17px;
+  font-weight: 600;
+  gap: 20px;
+}
+
+.friendRequestBtn {
+  background: #becad5;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  color: #000000;
+  width: 100%;
+  height: 50px;
+  border-radius: 5px;
+  margin-bottom: 59px;
+  font-size: 17px;
+  font-weight: 600;
+}
+
+.slidePhoto {
+  height: 20px;
+  width: 20px;
+  margin-bottom: 10px;
+}
+
+.slidecIcon {
+  height: 8px;
+  width: 30px;
+}
+
+/* chat section */
+.chat {
+  display: flex;
+  flex-direction: column;
+  gap: 30px;
+  align-items: center;
+  height: 70vh;
+  width: 450px;
+  position: relative;
+  float: right;
+  margin-left: 5%;
+}
+
+.callIcon {
+  width: 90px;
+  height: 40px;
+}
+
+.chat .callImg {
+  width: 100%;
+  max-width: 500px;
+  height: 76%;
+  border-radius: 15px;
+}
+
+.square {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  width: 150px;
+  height: 150px;
+  background-color: #c5c6d0;
+  border-radius: 15px;
+  position: absolute;
+  left: 2%;
+  bottom: 25%;
+}
+
+.circle {
+  width: 45px;
+  height: 45px;
+  border-radius: 50%;
+  border: solid 0.5px black;
+  background-color: white;
+}
+
+.feature {
+  display: flex;
+  padding: 10px;
+  justify-content: space-between;
+  align-items: center;
+  width: 100%;
+  align-items: center;
+  border-radius: 10px;
+  background: #c5d1dc;
+}
+
+.navIcon {
+  width: 35px;
+  height: 35px;
+}
+
+.micButton {
+  border: none;
+  background-color: white;
+  height: 50px;
+  width: 150px;
+}

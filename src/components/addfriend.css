@@ -1,13 +1,23 @@
-.container {
+body{
   display: flex;
-  flex-direction: column;
-  gap: 200px;
-  justify-content: space-between;
-  width: 100%;
-  height: 100vh;
+  justify-content: center;
+  align-items: center;
 }
 
-.container h3 {
+.container-addfriend {
+  display: flex;
+  flex-direction: column;
+  gap: 75px;
+  justify-content: space-between;
+  max-width: 100%;
+  width: 1050px;
+  height: 90vh;
+  background: var(--bg-primary);
+  border-radius: 35px;
+  padding-bottom: 10px;
+}
+
+.container-addfriend h3 {
   font-size: 25px;
   font-weight: 600;
 }
@@ -15,7 +25,7 @@
 .parent-div2{
   display: flex;
   justify-content: space-between;
-  padding: 0 6%;
+  padding: 20px 6%;
   justify-content: center;
   align-items: center;  
   width: 100%;
@@ -49,7 +59,8 @@ img {
   height: 70px;
   margin: 25px 0 0 0;
   align-items: center;
-  padding: 15px 35px;
+  justify-content: center;
+  padding: 15px 32px;
   gap: 50px;
   background-color: #e6e6e6;
   border-radius: 15px;
@@ -61,7 +72,16 @@ img {
   background-color: var(--bg-secondary);
   border: none;
   border-radius: 8px;
+  margin-bottom: 25px;
+  transition: background-color 0.3s, color 0.3s;
 }
+
+.request-sent {
+  background-color: rgba(8, 72, 125, 0.5); /* Use the RGB color */
+  color: white;
+  pointer-events: none; /* Disable pointer events if request is sent */
+}
+
 
 .josh {
   display: flex;
@@ -73,7 +93,7 @@ img {
   flex-direction: column;
   align-items: center;
   display: flex;
-  gap: 30px;
+  gap: 10px;
 }
 .con1 button {
   display: flex;
@@ -104,6 +124,9 @@ img {
   display: flex;
   gap: 30px;
 }
+.con2 img{
+  width: 30%;
+}
 .con2 button {
   display: flex;
   justify-content: center;
@@ -120,3 +143,4 @@ img {
   text-decoration: none;
   color: black;
 }
+

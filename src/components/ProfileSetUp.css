@@ -1,40 +1,46 @@
-@import url("https://fonts.googleapis.com/css2?family=Montserrat:wght@100;200;300;400;500;600;700;800;900&display=swap");
-
-*,
-::after,
-::before {
-  padding: 0;
-  margin: 0;
-  outline: 0;
-  box-sizing: border-box;
-  font-family: "Montserrat", sans-serif;
+body{
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 100vh;
 }
 
 .profile-container {
   display: flex;
   max-width: 100%;
   justify-content: space-around;
+  align-items: center;
   background: #f4f4f4;
   border-radius: 20px 50px 50px 20px;
   width: 900px;
+  height: 550px;
 }
 
 .profile-left-section {
-  background: linear-gradient(
-    194.64deg,
-    rgba(0, 9, 94, 0.6) 22.2%,
-    rgba(105, 41, 69, 0.558929) 32.75%,
-    rgba(255, 87, 34, 0.5) 43.47%,
-    #a13058 72.73%,
-    rgba(66, 8, 141, 0.8) 80.73%
-  );
+  background: var(--bg-gradient-1);
+}
+
+.profile-container {
+  display: flex;
+  max-width: 100%;
+  justify-content: center;
+  align-items: center;
+  background: #f4f4f4;
+  border-radius: 20px 50px 50px 20px;
+  width: 990px;
+}
+
+.profile-left-section {
+  background: var(--bg-gradient-1);
+  display: flex;
   width: 500px;
-  height: 650px;
+  height: 550px;
   max-width: 100%;
   border-radius: 20px 50px 50px 20px;
-  color: white;
+  color: var(--bg-primary);
   text-align: center;
 }
+
 .profile-left-section-wrapper {
   margin: 3.5em 0 0 0.4em;
   flex-direction: column;
@@ -44,8 +50,20 @@
 }
 
 .profile-left-section h1 {
-  text-align: left;
-  font-size: 20px;
+  font-size: 25px;
+  letter-spacing: 1px;
+  margin-top: 15px;
+}
+
+.profile-left-section-wrapper .image {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin-top: 50px;
+}
+
+.image img {
+  width: 55%;
 }
 
 .profile-right-section {
@@ -64,8 +82,8 @@
 }
 
 .profile-right-section p {
-  background-color: #08487d;
-  color: white;
+  background-color: var(--bg-secondary);
+  color: var(--bg-primary);
   padding: 10px;
   border-radius: 10px;
   font-size: 0.8em;
@@ -86,22 +104,20 @@
 input {
   width: 100%;
   background: #08487d33;
-
   outline: none;
   border: none;
   border-radius: 10px;
 }
+
 input,
 button {
   padding: 10px;
-
   margin-top: 2rem;
 }
 
 button {
-  background: #08487d;
-
-  color: white;
+  background: var(--bg-secondary);
+  color: var(--bg-primary);
   border: none;
   cursor: pointer;
   border-radius: 5px;
@@ -109,6 +125,14 @@ button {
   width: 50%;
 }
 
-button:hover {
-  background-color: #8e2de2;
+.profile-left-section-wrapper .logo-two {
+  width: 30%;
+}
+
+.images {
+  width: 100%;
+}
+
+.images img{
+  width: 70%;
 }

@@ -3,12 +3,11 @@ body {
   display: flex;
   align-items: center;
   justify-content: center;
-  flex-direction: column;
-  height: 100vh;
+  width: 100%;
 }
 
 .container {
-  background-color: var(--bg-prmary);
+  background-color: var(--bg-primary);
   border-radius: 30px;
   box-shadow: 0 5px 15px rgba(0, 0, 0, 0.35);
   position: relative;
@@ -42,7 +41,7 @@ body {
   color: var(--bg-primary);
   margin-top: 15px;
   font-size: 12px;
-  padding: 14px 85px;
+  padding: 14px 56px;
   border: 1px solid transparent;
   font-weight: 600;
   letter-spacing: 0.5px;
@@ -249,7 +248,7 @@ body {
 }
 
 .image img {
-  width: 85%;
+  width: 80%;
   margin-top: 10px;
 }
 
