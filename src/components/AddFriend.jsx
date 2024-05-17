@@ -69,7 +69,18 @@ function AddFriends() {
               <label>
                 <input type="text" placeholder="" />
               </label>
-              <button>Add</button>
+              <button
+                  onClick={() => handleRequestButton(users.id)}
+                  className={requestStatus[users.id] ? "request-sent" : ""}
+                  style={
+                    requestStatus[users.id]
+                      ? { backgroundColor: "rgba(8, 72, 125, 0.5)", color: "white" }
+                      : {}
+                  }
+                  disabled={clicked[users.id]}
+                >
+                  {clicked[users.id] ? "Sending..." : requestStatus[users.id] ? "Request sent" : "Add"}
+                </button>
             </div>
             <div className="con2">
               <a href="#">continue</a>

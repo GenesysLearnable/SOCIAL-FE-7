@@ -47,8 +47,7 @@ const OTP = () => {
           if (lastTimerCount <= 0) return lastTimerCount;
           return lastTimerCount - 1;
         });
-      }, 1000); //each count lasts for a second
-      //cleanup the interval on complete
+      }, 1000);
       return () => clearInterval(interval);
     }, [disable]);
   
@@ -186,11 +185,7 @@ const OTP = () => {
 
               <button className='verify'>Verify</button>
               <div className="input-box">
-                <label htmlFor="password">New Password</label>
-                <input type="password" placeholder="New Password" required />
-
-                <label htmlFor="password">Confirm Password</label>
-                <input type="password" placeholder="Confirm Password" required />
+                <input type="Email" placeholder="Email Verification" required />
               </div>
               <button className='cancel'>Resend OTP</button>
             </form>

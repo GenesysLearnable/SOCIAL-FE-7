@@ -1,8 +1,8 @@
 import React, { useState, useEffect } from "react";
 import "./Auth.css";
-import {  toast } from 'react-toastify';
-import 'react-toastify/dist/ReactToastify.css';
-import { useNavigate,Link } from "react-router-dom";
+import { toast } from "react-toastify";
+import "react-toastify/dist/ReactToastify.css";
+import { useNavigate, Link } from "react-router-dom";
 import Image2 from "../assets/image2-removebg-preview.png";
 import Image3 from "../assets/image3-removebg-preview.png";
 import Image5 from "../assets/poieeie_1-removebg-preview.png";
@@ -11,13 +11,15 @@ import image8 from "../assets/Layer 3.svg";
 import image9 from "../assets/Frame 120.svg";
 import Particle from "./Motion";
 import { setCredentials } from "../features/slices/authSlice";
-import { useLoginMutation,useRegisterMutation} from "../features/slices/userApiSlice";
+import {
+  useLoginMutation,
+  useRegisterMutation,
+} from "../features/slices/userApiSlice";
 import { useDispatch } from "react-redux";
 
 const Auth = () => {
-  
-  const [login ,{isLoading}] = useLoginMutation();
-  const [register, {loadingRegister}] = useRegisterMutation()
+  const [login, { isLoading }] = useLoginMutation();
+  const [register, { loadingRegister }] = useRegisterMutation();
   const [isActive, setIsActive] = useState(false);
   const [userInput, setUserInput] = useState({
     username: "",
@@ -72,20 +74,17 @@ const Auth = () => {
   const handleLoginClick = () => {
     setIsActive(false);
   };
-  const handleRegisterButton =  async (e) => {
+  const handleRegisterButton = async (e) => {
     e.preventDefault();
     try {
-      const res = await register((userInput))
-      .unwrap()
-      console.log(userInput)
-      history("/setup")
-      dispatch(setCredentials({...res}))
-      toast.success(`Welcome ${res.username}!`)
+      const res = await register(userInput).unwrap();
+      console.log(userInput);
+      history("/setup");
+      dispatch(setCredentials({ ...res }));
+      toast.success(`Welcome ${res.username}!`);
     } catch (error) {
-      toast.error(error?.data?.message || error.message) 
+      toast.error(error?.data?.message || error.message);
     }
-      
-   
   };
   const handleLoginButton = async (e) => {
     e.preventDefault();
@@ -93,15 +92,14 @@ const Auth = () => {
     const userInfo = { email, password };
 
     try {
-      const res = await login(userInput).unwrap()
-      console.log(userInfo)
-      history("/addfriends")
-      dispatch(setCredentials({...res}))
-      toast.success("Login successful!!")
+      const res = await login(userInput).unwrap();
+      console.log(userInfo);
+      history("/addfriends");
+      dispatch(setCredentials({ ...res }));
+      toast.success("Login successful!!");
     } catch (error) {
-      toast.error(error?.data?.message || error.message) 
+      toast.error(error?.data?.message || error.message);
     }
-   
   };
   return (
     <div className={`container ${isActive ? "active" : ""}`} id="container">
@@ -141,7 +139,6 @@ const Auth = () => {
               </span>
             </div>
             <button type="submit" onClick={handleRegisterButton}>
-    
               {loadingRegister ? "loading..." : "Signup"}
             </button>
             <div className="sign">
@@ -150,12 +147,13 @@ const Auth = () => {
               <div className="line"></div>
             </div>
             <p className="continue">Continue With</p>
-            <Link to={"/auth/google"} ><button type="submit" className="google-btn">
-              <img src={image7} />
-              Google
-              
-            </button></Link>
-            
+            <Link to={"/auth/google"}>
+              <button type="submit" className="google-btn">
+                <img src={image7} />
+                Google
+              </button>
+            </Link>
+
             <div className="account">
               <span>Already have an account? </span>
               <p className="sign" onClick={handleLoginClick}>
@@ -192,7 +190,7 @@ const Auth = () => {
               className="sign-btn"
               onClick={handleLoginButton}
             >
-              {isLoading ? "loading..." : "Sign in" }
+              {isLoading ? "loading..." : "Sign in"}
             </button>
             <div className="sign">
               <div className="line"></div>
@@ -200,11 +198,13 @@ const Auth = () => {
               <div className="line"></div>
             </div>
             <p className="continue">Continue With</p>
-            <a type="submit" className="google-btn">
-              <img src={image7} />
-              Google
-              {}
-            </a>
+            <Link to={"/auth/google"}>
+              <button type="submit" className="google-btn">
+                <img src={image7} />
+                Google
+                {}
+              </button>
+            </Link>
             <div className="account">
               <span className="txt-ac">Don't have an account? </span>
               <p className="sign" onClick={handleRegisterClick}>

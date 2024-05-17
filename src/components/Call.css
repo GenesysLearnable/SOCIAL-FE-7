@@ -143,7 +143,7 @@ body {
 .chat .callImg {
   width: 100%;
   max-width: 500px;
-  height: 76%;
+  height: 350px;
   border-radius: 15px;
 }
 
@@ -152,8 +152,8 @@ body {
   flex-direction: column;
   align-items: center;
   justify-content: center;
-  width: 150px;
-  height: 150px;
+  width: 100px;
+  height: 100px;
   background-color: #c5c6d0;
   border-radius: 15px;
   position: absolute;

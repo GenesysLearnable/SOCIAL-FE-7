@@ -75,6 +75,8 @@ img {
   border-radius: 8px;
   margin-bottom: 25px;
   transition: background-color 0.3s, color 0.3s;
+  align-items: center;
+  justify-content: center;
 }
 
 .request-sent {
