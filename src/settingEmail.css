@@ -1,0 +1,83 @@
+.main {
+  width: 550px;
+  height: 250px;
+  position: relative;
+}
+.mainSection {
+  position: relative;
+  margin-bottom: 50px;
+  padding: 40px;
+}
+
+.input {
+  border: none;
+  display: flex;
+  width: 465px;
+  height: 59px;
+  padding: 0px 24px;
+  align-items: center;
+  gap: 20px;
+  flex-shrink: 0;
+  border-radius: 10px;
+  background: rgba(8, 72, 125, 0.2);
+  font-size: 24px;
+  margin-bottom: 15px;
+}
+.buttonComp {
+  display: flex;
+  justify-content: flex-end;
+  align-items: flex-start;
+  margin-bottom: 20px;
+  gap: 24px;
+  position: absolute;
+  right: 30px;
+  bottom: -15px;
+}
+.otp {
+  color: var(--Primary-Primary10, #adc2d4);
+
+  /* Body text(semibold)/body text(semibold)03 */
+  font-family: Montserrat;
+  font-size: 16px;
+  font-style: normal;
+  font-weight: 600;
+  line-height: normal;
+}
+
+.submitButton {
+  background-color: #5a85a8;
+  color: white;
+}
+.headTop {
+  font-size: 24px;
+  color: var(--Primary-Primary07, #316693);
+
+  /* Body text(semibold)/body text(semibold)02 */
+  font-family: Montserrat;
+  font-size: 24px;
+  font-style: normal;
+  font-weight: 600;
+  line-height: normal;
+  margin-top: 30px;
+}
+
+.closecircleButton {
+  position: absolute;
+  right: 75px;
+  top: 2px;
+}
+.text {
+  color: var(--Primary-Primary03, #04243e);
+
+  /* Body text(semibold)/body text(semibold)05 */
+  font-family: Montserrat;
+  font-size: 12px;
+  font-style: normal;
+  font-weight: 600;
+  line-height: normal;
+}
+.sectionBtn {
+  position: absolute;
+  right: 35px;
+  bottom: 0px;
+}
