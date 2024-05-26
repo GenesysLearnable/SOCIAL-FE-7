@@ -1,0 +1,95 @@
+.containerAddfriend {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  max-width: 100%;
+  width: 1050px;
+  height: 635px;
+  background: var(--bg-primary);
+  border-radius: 35px;
+  padding-bottom: 10px;
+}
+
+.containerAddfriend h1 {
+  font-size: 40px;
+  font-weight: 500;
+}
+
+.parent-div2 {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  width: 90%;
+  padding: 0 6%;
+  padding-top: 20px;
+}
+
+.parent-div span {
+    color: #ff0000;
+}
+
+.parent-div2 .logo {
+  width: 150px;
+}
+
+.parent-div p {
+  color: #03182a;
+  font-size: 26px;
+  font-weight: 400;
+}
+
+.parent-div {
+  display: flex;
+  justify-content: space-between;
+  padding: 0 6%;
+  width: 100%;
+  overflow: hidden;
+  height: 72%;
+}
+
+.container-addfriend img {
+  width: 35px;
+  border-radius: 12px;
+}
+
+.cally {
+  overflow-x: auto;
+  scroll-behavior: smooth;
+}
+
+.cally div {
+  display: flex;
+  /* width: 100%; */
+  height: 70px;
+  margin: 20px 0 0 0;
+  align-items: center;
+  justify-content: space-between;
+  padding: 15px 20px;
+  gap: 40px;
+  background-color: #e6e6e6;
+  border-radius: 20px;
+  border: 1px solid #CEDAE5;
+}
+
+.cally button {
+  display: flex;
+  justify-content: center;
+  padding: 10px 50px;
+  width: 313px;
+  color: var(--bg-primary);
+  background-color: var(--bg-secondary);
+  border: none;
+  font-size: 20px;
+  border-radius: 10px;
+  align-items: center;
+  justify-content: center;
+  cursor: pointer;
+  transition: background-color 0.3s, color 0.3s;
+}
+
+.cally .reject {
+    border-radius: 10px;
+    border: 1px solid #316693;
+    background: #CEDAE5;
+}

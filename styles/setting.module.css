@@ -1,0 +1,114 @@
+.settings-main-container a {
+  text-decoration: none;
+  color: var(--link-color);
+  font-size: 12px;
+  font-weight: 500;
+}
+
+.settings-main-container {
+  background: var(--bg-primary);
+  display: inline-flex;
+  padding: 15.5px 78px 9.5px 79px;
+  justify-content: center;
+  align-items: center;
+  border-radius: 10px;
+  width: 650px;
+  max-width: 100%;
+  position: absolute;
+  z-index: 10000;
+  right: 25%;
+  top: 15%;
+}
+
+.settings-container {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  gap: 5rem;
+  width: 100%;
+}
+
+.settings-container .header-1 {
+  display: flex;
+  justify-content: space-between;
+  width: 100%;
+}
+
+.settings-container .header-1 h1 {
+  color: #316693;
+  font-size: 32px;
+  font-weight: 600;
+}
+
+.settings-container .header-1 img {
+  display: flex;
+  width: 24px;
+  height: 24px;
+}
+
+.settings-form-main-container {
+  width: 100%;
+  display: flex;
+  justify-content: center;
+}
+
+.settings-form-container {
+  display: flex;
+  width: 100%;
+  height: 50vh;
+  gap: 6rem;
+}
+
+.profile-settings {
+  display: flex;
+  align-items: flex-end;
+  width: 100%;
+  position: relative;
+}
+
+.profile-settings .avatar {
+  width: 230px;
+}
+
+.profile-settings .icon {
+  position: absolute;
+  right: 0;
+}
+
+.container-main-input {
+  width: 100%;
+}
+
+.container-input {
+  line-height: 1.5;
+}
+
+.container-input .settings-name {
+  color: #101010;
+  font-size: 20px;
+}
+
+.container-input-2,
+.container-input-3 {
+  margin-top: 1.5rem;
+  line-height: 1.5;
+}
+
+.container-input-4 {
+  margin-top: 3rem;
+}
+
+.container-input-2 p {
+  color: var(--link-color);
+}
+
+.container-input-5 {
+  margin-top: 10px;
+}
+
+.container-input-5 p a {
+  font-size: 17px;
+  font-weight: 500;
+  color: red;
+}
