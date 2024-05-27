@@ -93,18 +93,21 @@ The `profile.jsx` file handles user profile setup, including updating the userna
 
     `npm run build`
     `npm run start`
-- Running the Project
+
+### Running the Project
 
 - Sign Up: Navigate to the sign-up page, fill in the required fields, and create an account.
 - Log In: Navigate to the login page, enter your credentials, and log in to your account.
 - Profile Setup: After logging in, set up your profile by uploading a profile picture and updating your username.
 - Make Calls: Use the call page to search for friends, add friends, and make video calls.
 
-- Notes
+### Notes
+
 Ensure that your API endpoints and authentication configurations are correctly set in the .env file.
 For Google OAuth, configure your Google Developer Console and update the necessary endpoints in the backend.
 
-- Conclusion
+### Conclusion
+
 This README file provides a comprehensive overview of the SeeMe project, including its structure, key components, and usage instructions. Follow the steps outlined to set up and run the project, and refer to the code for detailed implementation of the authentication, call, and profile setup functionalities.
 
 In this example, we used two spaces at the end of the line in the "Notes" section to create a line break. For paragraphs, we simply left a blank line between them. This helps keep the README file well-structured and easy to read.
