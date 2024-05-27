@@ -1,0 +1,239 @@
+.profile-container {
+  display: flex;
+  max-width: 100%;
+  justify-content: center;
+  align-items: center;
+  background: var(--bg-primary);
+  border-radius: 20px 50px 50px 20px;
+  width: 990px;
+  height: 600px;
+}
+
+.profile-left-section {
+  background: var(--bg-gradient-1);
+  display: flex;
+  width: 500px;
+  height: 100%;
+  max-width: 100%;
+  border-radius: 20px 50px 50px 20px;
+  color: var(--bg-primary);
+  text-align: center;
+}
+
+.profile-left-section-wrapper {
+  margin: 3.5em 0 0 0.4em;
+  flex-direction: column;
+  align-items: center;
+  padding: 20px;
+  width: 100%;
+}
+
+.profile-left-section h1 {
+  font-size: 25px;
+  letter-spacing: 1px;
+  margin-top: 10px;
+}
+
+.profile-left-section-wrapper .image {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin-top: 50px;
+}
+
+.profile-right-section {
+  text-align: center;
+  display: flex;
+  align-items: center;
+  width: 500px;
+  max-width: 100%;
+  height: 100%;
+  background: var(--bg-primary);
+  border-radius: 50px 20px 20px 50px;
+}
+
+.fixed-width {
+  margin: 0 auto;
+  width: 70%;
+}
+
+.profile-right-section .text {
+  background-color: var(--bg-secondary);
+  color: var(--bg-primary);
+  padding: 7px;
+  border-radius: 10px;
+  font-size: 0.8em;
+}
+.setprofiles {
+  margin-top: 2rem;
+}
+.profile-image-wrapper {
+  position: relative;
+}
+
+.profile-right-section img {
+  margin-top: 2rem;
+  border-radius: 100px;
+  width: 200px;
+  height: 200px;
+  box-shadow: 0 10px 10px 0 rgba(0, 0, 0, 0.07);
+}
+
+.profile-container .input {
+  width: 100%;
+  height: 50px;
+  background: #08487d33;
+  outline: none;
+  border: none;
+  border-radius: 10px;
+}
+
+.input,
+.button {
+  padding: 10px;
+  margin-top: 2rem;
+}
+
+.button-box{
+  display: flex;
+  flex-direction: column;
+  width: 100%;
+  align-items: center;
+}
+
+.button {
+  background: var(--bg-secondary);
+  color: var(--bg-primary);
+  border: none;
+  cursor: pointer;
+  border-radius: 5px;
+  margin-top: 1.5rem;
+  width: 50%;
+}
+
+.button2 {
+  background: var(--bg-primary);
+  color: var(--bg-secondary);
+  border: 1px solid var(--bg-secondary);
+  cursor: pointer;
+  border-radius: 5px;
+  margin-top: 1.5rem;
+  width: 50%;
+  height: 40px;
+}
+
+.profile-left-section-wrapper .logo-two {
+  width: 30%;
+}
+
+.images {
+  width: 100%;
+}
+
+.images img {
+  width: 80%;
+}
+
+.profile-right-section-wrapper .edit {
+  width: 35px;
+  height: 35px;
+  border-radius: 21px;
+  background: #094272;
+  color: var(--bg-primary);
+  position: absolute;
+  right: 20%;
+  top: 70%;
+  box-shadow: 0 10px 10px 0 rgba(0, 0, 0, 0.2);
+  cursor: pointer;
+}
+
+.profile-right-section-wrapper .copy {
+  width: 20px;
+  height: 20px;
+  margin: 0;
+  cursor: pointer;
+}
+
+@media (min-width: 1440px) {
+  .profile-container {
+    width: 100%;
+    height: 100vh;
+    display: flex;
+    justify-self: unset;
+  }
+  .profile-left-section {
+    background: var(--bg-gradient-1);
+    display: flex;
+    align-items: center;
+    width: 720px;
+    height: 100%;
+    max-width: 100%;
+    border-radius: 20px 50px 50px 20px;
+    color: var(--bg-primary);
+    text-align: center;
+  }
+  .profile-right-section {
+    text-align: center;
+    display: flex;
+    align-items: center;
+    width: 720px;
+    max-width: 100%;
+    height: 100%;
+    background: var(--bg-primary);
+    border-radius: 50px 20px 20px 50px;
+  }
+  .button {
+    background: var(--bg-secondary);
+    color: var(--bg-primary);
+    border: none;
+    cursor: pointer;
+    border-radius: 5px;
+    margin-top: 1.5rem;
+    width: 50%;
+    height: 50px;
+    font-size: 17px;
+  }
+  .profile-container .input {
+    width: 100%;
+    background: #08487d33;
+    font-size: 20px;
+    outline: none;
+    border: none;
+    border-radius: 10px;
+    height: 60px;
+  }
+}
+
+@media (max-width: 780px) {
+  .profile-container {
+    width: 100%;
+    height: 100vh;
+    display: flex;
+    justify-self: unset;
+  }
+  .profile-left-section {
+    display: none;
+  }
+  .profile-right-section {
+    width: 100%;
+    height: 100%;
+  }
+  .fixed-width {
+    margin: 0 auto;
+    flex-direction: column;
+    align-items: center;
+    width: 80%;
+  }
+  .profile-right-section .text{
+    height: 70px;
+  }
+}
+
+@media (max-width: 450px){
+  .profile-right-section-wrapper{
+    padding: 0 10px;
+  }
+  .fixed-width{
+    width: 100%;
+  }
+}

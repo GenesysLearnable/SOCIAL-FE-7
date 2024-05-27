@@ -1,0 +1,242 @@
+.containerAddfriend {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  max-width: 100%;
+  width: 1050px;
+  height: 635px;
+  background: var(--bg-primary);
+  border-radius: 35px;
+  padding-bottom: 10px;
+}
+
+.containerAddfriend h1 {
+  font-size: 40px;
+  font-weight: 500;
+}
+
+.parent-div2 {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  width: 90%;
+  padding: 0 6%;
+  padding-top: 20px;
+}
+
+.parent-div span {
+  color: #ff0000;
+}
+
+.parent-div2 .logo {
+  width: 150px;
+}
+
+.parent-div p {
+  color: #03182a;
+  font-size: 26px;
+  font-weight: 400;
+}
+
+.parent-div {
+  display: flex;
+  justify-content: space-between;
+  padding: 0 6%;
+  width: 100%;
+  overflow: hidden;
+  height: 72%;
+}
+
+.containerAddfriend img {
+  width: 35px;
+  border-radius: 12px;
+}
+
+.cally {
+  overflow-x: auto;
+  scroll-behavior: smooth;
+}
+
+.cally div {
+  display: flex;
+  height: 70px;
+  margin: 20px 0 0 0;
+  align-items: center;
+  justify-content: space-between;
+  padding: 15px 20px;
+  gap: 40px;
+  background-color: #e6e6e6;
+  border-radius: 20px;
+  border: 1px solid #cedae5;
+}
+
+.cally button {
+  display: flex;
+  justify-content: center;
+  padding: 10px 50px;
+  width: 313px;
+  color: var(--bg-primary);
+  background-color: var(--bg-secondary);
+  border: none;
+  font-size: 20px;
+  border-radius: 10px;
+  align-items: center;
+  justify-content: center;
+  cursor: pointer;
+  transition: background-color 0.3s, color 0.3s;
+}
+
+.cally .reject {
+  border-radius: 10px;
+  border: 1px solid #316693;
+  background: #cedae5;
+}
+
+@media (min-width: 1440px){
+  .containerAddfriend{
+    width: 100%;
+    height: 100vh;
+  }
+  .parent-div {
+    display: flex;
+    justify-content: space-between;
+    padding: 0 6%;
+    width: 100%;
+    overflow: hidden;
+    height: 80%;
+  }
+  .cally div {
+    display: flex;
+    height: 80px;
+    margin: 20px 0 0 0;
+    align-items: center;
+    justify-content: space-between;
+    padding: 15px 20px;
+    gap: 40px;
+    background-color: #e6e6e6;
+    border-radius: 20px;
+  }
+}
+
+@media(max-width: 1075px){
+  .containerAddfriend {
+    gap: 25px;
+    width: 950px;
+  }
+}
+
+
+@media (min-width: 600px) and (max-width: 812px) {
+  .parent-div {
+    gap: 20px;
+  }
+  .addUserContainer {
+    padding: 0 10px;
+  }
+
+  .parent-div2 .logo{
+    width: 100px;
+  }
+  .containerAddfriend h1{
+    font-size: 22px;
+  }
+}
+
+@media(max-width: 799px){
+  .cally div {
+    height: 70px;
+    padding: 15px 35px;
+    gap: 20px;
+  }
+  .cally button {
+    padding: 10px 35px;
+  }
+}
+
+@media (min-width: 350px) and  (max-width: 755px) {
+
+  .containerAddfriend {
+    height: 100%;
+    padding: 10px;
+  }
+  .containerAddfriend
+  .parent-div2 .logo{
+    display: none;
+  }
+
+  .parent-div {
+    flex-direction: column;
+    height: 100%;
+  }
+  
+    .containerAddfriend h1{
+      font-size: 25px;
+    }
+
+  .containerAddfriend .header{
+    display: none;
+  }
+
+  .containerAddfriend .add-search{
+    display: block;
+    width: 100%;
+    border: none;
+    position: relative;
+    margin-bottom: 30px;
+  }
+
+  .containerAddfriend .add-search input[type="text"]{
+    position: absolute;
+    top: 0;
+    left: 0;
+    padding: 30px;
+    border-radius: 10px;
+    bottom: 0;
+    width: 100%;
+    font-size: 20px;
+  }
+}
+
+@media (min-width: 120px) and (max-width: 350px){
+  .containerAddfriend {
+    height: 100%;
+    padding: 10px;
+  }
+
+  .parent-div {
+    flex-direction: column;
+    height: 100%;
+  }
+
+  .containerAddfriend h1{
+    font-size: 20px;
+  }
+
+  .containerAddfriend .header{
+    display: none;
+  }
+
+  .containerAddfriend .add-search{
+    display: block;
+    width: 100%;
+    border: none;
+    position: relative;
+    margin-bottom: 30px;
+  }
+
+  .containerAddfriend .add-search input[type="text"]{
+    position: absolute;
+    top: 0;
+    left: 0;
+    padding: 30px;
+    border-radius: 10px;
+    bottom: 0;
+    width: 100%;
+    font-size: 20px;
+  }
+
+  .parent-div2 .logo{
+    display: none;
+  }
+}
